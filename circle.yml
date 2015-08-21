@@ -8,11 +8,7 @@ dependencies:
     - curl https://install.meteor.com/ | sh
   override:
     - docker info
+    - docker build -t vardanfashionunited/bluegreengithub .
 test:
-  post:
-    - ./test.sh
-deployment:
-  production:
-    branch: master
-    commands:
-      - ./deploy_prod.sh
+  override:
+    - cd tests && bash run_tests.sh
