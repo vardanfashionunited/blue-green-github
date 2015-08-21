@@ -8,4 +8,4 @@ dependencies:
     - curl https://install.meteor.com/ | sh
 test:
   override:
-    - cd tests && bash run_tests.sh
+    - cd tests && bash function.sh
