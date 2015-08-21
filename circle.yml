@@ -7,5 +7,5 @@ machine:
     - curl https://install.meteor.com | /bin/sh
 dependencies:
   override:
-    - npm install
+    - npm install selenium-webdriver
     - meteor list
