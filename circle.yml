@@ -6,9 +6,6 @@ machine:
 dependencies:
   pre:
     - curl https://install.meteor.com/ | sh
-  override:
-    - docker info
-    - docker build -t vardanfashionunited/bluegreengithub .
 test:
   override:
     - cd tests && bash run_tests.sh
