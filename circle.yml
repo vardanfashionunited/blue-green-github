@@ -1,9 +1,19 @@
 machine:
   node:
     version: 0.10.33
-  pre:
-    - curl https://install.meteor.com | /bin/sh
 dependencies:
+  pre:
+    - curl https://install.meteor.com/ | sh
+test:
+  pre:
+    - git reset --hard HEAD
   override:
-    - npm install selenium-webdriver
-    - meteor list
+    # - meteor run --test
+    - echo "no test"
+  post:
+    - docker build -t bgtest/fuww .
+deployment:
+  production:
+    branch: master
+    commands:
+      - git clone https://github.com/vardanfashionunited/blue-green-github.git
