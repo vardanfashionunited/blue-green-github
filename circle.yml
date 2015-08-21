@@ -8,15 +8,11 @@ dependencies:
     - curl https://install.meteor.com/ | sh
   override:
     - docker info
-    - docker build -t vardanfashionunited/bluegreengithub .
 test:
-  override:
-    # - meteor run --test
-    - docker run -d -p 9200:9200 vardanfashionunited/bluegreengithub; sleep 10
-    - curl --retry 10 --retry-delay 5 -v http://localhost:9200
+  post:
+    - ./test.sh
 deployment:
   production:
     branch: master
     commands:
-      - docker login -e vardan@fashionunited.com -u vardanfashionunited -p Vardan@123
-      - docker push vardanfashionunited/bluegreengithub
+      - ./deploy_prod.sh
