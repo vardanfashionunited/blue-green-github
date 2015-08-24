@@ -1,3 +1,3 @@
 #! /bin/bash
 cd leaderboard
-meteor --test
+meteor --test --once
