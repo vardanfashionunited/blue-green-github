@@ -1,3 +1,3 @@
 #! /bin/bash
-cd ./
-meteor --test --once
+#cd ./
+#meteor --test --once
