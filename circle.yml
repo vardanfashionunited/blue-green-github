@@ -1,10 +1,11 @@
-general:
-  build_dir: leaderboard
+machine:
+  node:
+    version: 0.10.22
 
 dependencies:
   pre:
     - curl https://install.meteor.com | /bin/sh
 
 test:
-  override:
-    - meteor --test
+  post:
+    - ./test.sh

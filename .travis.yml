@@ -1,6 +1,0 @@
-language: node_js
-
-install: curl https://install.meteor.com | /bin/sh
-
-script:
-  bash test.sh
