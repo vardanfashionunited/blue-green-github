@@ -8,4 +8,4 @@ dependencies:
 
 test:
   post:
-    - ./test.sh
+    - test.sh
