@@ -5,7 +5,3 @@ machine:
 dependencies:
   pre:
     - curl https://install.meteor.com | /bin/sh
-
-test:
-  override:
-    - ./test.sh
