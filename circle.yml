@@ -8,4 +8,4 @@ dependencies:
     - npm install selenium-webdriver
 test:
   override:
-    - meteor
+    - meteor --test
