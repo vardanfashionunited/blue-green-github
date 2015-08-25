@@ -4,7 +4,7 @@ machine:
 
 dependencies:
   pre:
-  	- npm install
+    - npm install
     - curl https://install.meteor.com | /bin/sh
 test:
   override:
