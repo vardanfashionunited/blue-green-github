@@ -3,6 +3,3 @@ machine:
     version: 0.10.33
   pre:
     - curl https://install.meteor.com
-test:
-  override:
-    - meteor --test
